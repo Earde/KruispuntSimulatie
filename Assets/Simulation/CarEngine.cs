@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarEngine : MonoBehaviour
 {
     public Transform path;
-    public float maxSteerAngle = 90f;
+    public float maxSteerAngle = 45f;
     public WheelCollider wheelFL; // Front Left Wheel
     public WheelCollider wheelFR; // Front Right Wheel
 
@@ -15,6 +15,8 @@ public class CarEngine : MonoBehaviour
 
     private List<Transform> nodes;
     public int currentNode = 0;
+
+    public float wayPointDistance = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +65,7 @@ public class CarEngine : MonoBehaviour
 
     private void CheckWaypointDistance()
     {
-        if (Vector3.Distance(transform.position, nodes[currentNode].position) < 0.1f)
+        if (Vector3.Distance(transform.position, nodes[currentNode].position) < wayPointDistance)
         {
             currentNode++;
             if (currentNode == nodes.Count)
