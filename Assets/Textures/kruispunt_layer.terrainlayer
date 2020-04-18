@@ -7,7 +7,7 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: kruispunt_layer
-  m_DiffuseTexture: {fileID: 2800000, guid: 987401a4990b1734fb7a860d17dd5f35, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: 42b7be9cf4444ad448366cc011221595, type: 3}
   m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 1000, y: 1000}
