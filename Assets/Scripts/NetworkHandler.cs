@@ -7,10 +7,12 @@ using UnityEngine;
 
 public class NetworkHandler : MonoBehaviour
 {
+    public bool useLog = false;
+
     WebSocket webSocket;
 
     string[] laneNames;
-    Dictionary<string, List<GameObject>> trafficObjects = new Dictionary<string, List<GameObject>>();
+    Dictionary<string, List<GameObject>> trafficObjects = new Dictionary<string, List<GameObject>>(); // <Name, List<Lights>> ex. dict["A1"] == (A1.0 + A1.1) GameObjects
 
     // Start is called before the first frame update
     async void Start()
@@ -26,19 +28,19 @@ public class NetworkHandler : MonoBehaviour
             "GF1", "GF2", "GV1", "GV2", "GV3", "GV4" };
 
         // Create <lightname, gameobjects> lookup table
-        GameObject[] trafficLightObjects = FindObjectsOfType(typeof(GameObject)) as GameObject[];
-        for (int i = 0; i < trafficLightObjects.Length; i++)
+        GameObject[] gameObjects = FindObjectsOfType(typeof(GameObject)) as GameObject[];
+        for (int i = 0; i < gameObjects.Length; i++)
         {
             foreach (string name in laneNames)
             {
-                if (trafficLightObjects[i].name.Contains("TrafficLight_" + name))
+                if (gameObjects[i].name.Contains("TrafficLight_" + name))
                 {
                     if (trafficObjects.ContainsKey(name))
                     {
-                        trafficObjects[name].Add(trafficLightObjects[i]);
+                        trafficObjects[name].Add(gameObjects[i]);
                     } else
                     {
-                        trafficObjects.Add(name, new List<GameObject>() { trafficLightObjects[i] });
+                        trafficObjects.Add(name, new List<GameObject>() { gameObjects[i] });
                     }
                 }
             }
@@ -49,23 +51,25 @@ public class NetworkHandler : MonoBehaviour
 
         webSocket.OnOpen += () =>
         {
-            Debug.Log("Opened");
+            Log("Opened");
         };
 
         webSocket.OnError += (e) =>
         {
-            Debug.Log("Error! " + e);
+            Log("Error! " + e);
         };
 
         webSocket.OnClose += (e) =>
         {
-            Debug.Log("Closed");
+            Log("Closed");
         };
 
         webSocket.OnMessage += (e) =>
         {
             UpdateTrafficLights(System.Text.Encoding.UTF8.GetString(e));
         };
+
+        InvokeRepeating("SendTraffic", 2.0f, 1.0f); // After 2 seconds keep sending traffic quantities every 1 second
 
         while (true)
         {
@@ -104,14 +108,16 @@ public class NetworkHandler : MonoBehaviour
         }
     }
 
-    async void SendTraffic(Dictionary<string, int> lanes)
+    async void SendTraffic()
     {
         if (webSocket != null && webSocket.State == WebSocketState.Open)
         {
+            Dictionary<string, int> lanes = new Dictionary<string, int>();
             foreach (string key in laneNames)
             {
                 lanes[key] = 0;
             }
+            lanes["D3"] = 1;
             string json = JsonConvert.SerializeObject(lanes);
             //Debug.Log(json);
             await webSocket.SendText(json);
@@ -123,6 +129,14 @@ public class NetworkHandler : MonoBehaviour
         if (webSocket != null)
         {
             await webSocket.Close();
+        }
+    }
+
+    private void Log(string message)
+    {
+        if (useLog)
+        {
+            Debug.Log(message);
         }
     }
 }

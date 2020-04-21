@@ -19,6 +19,8 @@ public class CarEngine : MonoBehaviour
 
     public float wayPointDistance = 0.2f;
 
+    public bool delete = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +76,7 @@ public class CarEngine : MonoBehaviour
             if (currentNode == nodes.Count)
             {
                 currentNode = 0;
+                delete = true;
             }
         }
     }
