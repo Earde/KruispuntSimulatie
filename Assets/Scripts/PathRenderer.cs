@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class PathRenderer : MonoBehaviour
 {
-    public Color lineColor;
+    public int spawnPoints = 1;
 
     private List<Transform> nodes = new List<Transform>();
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = lineColor;
-
         Transform[] pathTransforms = GetComponentsInChildren<Transform>();
         nodes = new List<Transform>();
 
@@ -25,6 +23,10 @@ public class PathRenderer : MonoBehaviour
 
         for (int i = 0; i < nodes.Count; i++)
         {
+            if (i < spawnPoints) { Gizmos.color = Color.blue; }
+            if (i == spawnPoints) { Gizmos.color = Color.yellow; }
+            if (i == spawnPoints + 1) { Gizmos.color = Color.red; }
+            if (i == spawnPoints + 2) { Gizmos.color = Color.white; }
             Gizmos.DrawWireSphere(nodes[i].position, 0.3f);
             if (i < nodes.Count - 1)
             {

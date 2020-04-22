@@ -27,7 +27,7 @@ public class NetworkHandler : MonoBehaviour
             "FF1", "FF2", "FV1", "FV2", "FV3", "FV4", 
             "GF1", "GF2", "GV1", "GV2", "GV3", "GV4" };
 
-        // Create <lightname, gameobjects> lookup table
+        // Create <trafficLightName, gameobjects> lookup table
         GameObject[] gameObjects = FindObjectsOfType(typeof(GameObject)) as GameObject[];
         for (int i = 0; i < gameObjects.Length; i++)
         {
@@ -117,9 +117,12 @@ public class NetworkHandler : MonoBehaviour
             {
                 lanes[key] = 0;
             }
-            lanes["D3"] = 1;
+            foreach (GameObject path in GameObject.FindGameObjectsWithTag("Path"))
+            {
+                TrafficSpawner ts = path.GetComponent<TrafficSpawner>();
+                lanes[ts.id] = ts.CarCountOnPressurePlate();
+            }
             string json = JsonConvert.SerializeObject(lanes);
-            //Debug.Log(json);
             await webSocket.SendText(json);
         }
     }

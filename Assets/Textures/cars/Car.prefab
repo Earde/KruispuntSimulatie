@@ -123,6 +123,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 54541342497737064, guid: 6f39632663e189a43ba1dba6a3232eea,
+        type: 3}
+      propertyPath: m_Mass
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 54541342497737064, guid: 6f39632663e189a43ba1dba6a3232eea,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 198988076545087770, guid: 6f39632663e189a43ba1dba6a3232eea,
         type: 3}
       propertyPath: lengthInSec
@@ -241,12 +251,12 @@ PrefabInstance:
     - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
         type: 3}
       propertyPath: maxSpeed
-      value: 2000
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
         type: 3}
       propertyPath: maxMotorTorque
-      value: 5000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
         type: 3}
@@ -256,7 +266,42 @@ PrefabInstance:
     - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
         type: 3}
       propertyPath: wayPointDistance
-      value: 10
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
+        type: 3}
+      propertyPath: id
+      value: D3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
+        type: 3}
+      propertyPath: pressurePlatePathNode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
+        type: 3}
+      propertyPath: maxMotorBrakeTorque
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
+        type: 3}
+      propertyPath: sensorLength
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
+        type: 3}
+      propertyPath: frontSensorPosition
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
+        type: 3}
+      propertyPath: pressurePlateEndNode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
+        type: 3}
+      propertyPath: trafficLight
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f39632663e189a43ba1dba6a3232eea, type: 3}

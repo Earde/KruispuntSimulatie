@@ -4,22 +4,38 @@ using UnityEngine;
 
 public class CarEngine : MonoBehaviour
 {
+    [Header("General")]
+    public string id = "";
+
+    [Header("Traffic Light")]
+    public GameObject trafficLight;
+
+    [Header("Path")]
     public Transform path;
-    public float maxSteerAngle = 45f;
+    public float wayPointDistance;
+    public int pressurePlateEndNode;
+
+    [Header("Motor")]
+    public float maxSteerAngle;
     public WheelCollider wheelFL; // Front Left Wheel
     public WheelCollider wheelFR; // Front Right Wheel
-
-    public float maxMotorTorque = 120.0f;
-    public float currentSpeed;
-    public float maxSpeed = 100.0f;
+    public float maxMotorBrakeTorque;
+    public float maxMotorTorque;
+    public float maxSpeed;
     public Vector3 centerOfMass;
 
-    private List<Transform> nodes;
-    public int currentNode = 0;
+    [Header("Sensor")]
+    public float sensorLength = 10f;
+    public float frontSensorPosition = 2.1f;
 
-    public float wayPointDistance = 0.2f;
-
+    [Header("Do not edit")]
     public bool delete = false;
+    public int currentNode = 0;
+    public float currentSpeed;
+
+    private List<Transform> nodes;
+    private bool isBraking = false;
+    private float tempMaxSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -40,9 +56,34 @@ public class CarEngine : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Sensors();
+        CheckWaypointDistance();
         ApplySteer();
         Drive();
-        CheckWaypointDistance();
+        Brake();
+        isBraking = false;
+    }
+
+    private void Sensors()
+    {
+        RaycastHit hit;
+        Vector3 sensorStartPosition = this.gameObject.transform.localPosition;
+        sensorStartPosition.z += frontSensorPosition;
+        sensorStartPosition.y += 1.0f;
+
+        if (Physics.Raycast(sensorStartPosition, transform.forward, out hit, sensorLength))
+        {
+            CarEngine carInFront = hit.collider.gameObject.GetComponentInParent<CarEngine>();
+            if (carInFront != null)
+            {
+                // Geen bumperklevers
+                tempMaxSpeed = Mathf.Min(carInFront.currentSpeed, carInFront.tempMaxSpeed) * 0.9f; // Get speed of car in front
+                Debug.DrawLine(sensorStartPosition, hit.point, Color.white);
+            }
+        } else
+        {
+            tempMaxSpeed = maxSpeed;
+        }
     }
 
     private void ApplySteer()
@@ -57,7 +98,7 @@ public class CarEngine : MonoBehaviour
     {
         currentSpeed = 2 * Mathf.PI * wheelFL.radius * wheelFL.rpm * 60 / 1000;
 
-        if (currentSpeed < maxSpeed)
+        if (currentSpeed < tempMaxSpeed && !isBraking)
         {
             wheelFL.motorTorque = maxMotorTorque;
             wheelFR.motorTorque = maxMotorTorque;
@@ -65,12 +106,31 @@ public class CarEngine : MonoBehaviour
         {
             wheelFL.motorTorque = 0;
             wheelFR.motorTorque = 0;
+            isBraking = true;
+        }
+    }
+
+    private void Brake()
+    {
+        if (isBraking)
+        {
+            wheelFR.brakeTorque = maxMotorBrakeTorque;
+            wheelFL.brakeTorque = maxMotorBrakeTorque;
+        } else
+        {
+            wheelFR.brakeTorque = 0;
+            wheelFL.brakeTorque = 0;
         }
     }
 
     private void CheckWaypointDistance()
     {
-        if (Vector3.Distance(transform.position, nodes[currentNode].position) < wayPointDistance)
+        if (currentNode == pressurePlateEndNode && trafficLight.GetComponent<TrafficLight>().trafficLight.color != Color.green)
+        {
+            isBraking = true;
+            //TODO: Build logic for orange
+        }
+        else if (Vector3.Distance(transform.position, nodes[currentNode].position) < wayPointDistance)
         {
             currentNode++;
             if (currentNode == nodes.Count)
