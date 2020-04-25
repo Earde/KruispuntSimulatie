@@ -77,7 +77,7 @@ public class CarEngine : MonoBehaviour
             if (carInFront != null)
             {
                 // Geen bumperklevers
-                tempMaxSpeed = Mathf.Min(carInFront.currentSpeed, carInFront.tempMaxSpeed) * 0.9f; // Get speed of car in front
+                tempMaxSpeed = Mathf.Min(carInFront.currentSpeed, carInFront.tempMaxSpeed) * 0.75f; // Get speed of car in front
                 Debug.DrawLine(sensorStartPosition, hit.point, Color.white);
             }
         } else
@@ -106,6 +106,9 @@ public class CarEngine : MonoBehaviour
         {
             wheelFL.motorTorque = 0;
             wheelFR.motorTorque = 0;
+        }
+        if (currentSpeed >= tempMaxSpeed)
+        {
             isBraking = true;
         }
     }
@@ -130,7 +133,7 @@ public class CarEngine : MonoBehaviour
             isBraking = true;
             //TODO: Build logic for orange
         }
-        else if (Vector3.Distance(transform.position, nodes[currentNode].position) < wayPointDistance)
+        if (Vector3.Distance(transform.position, nodes[currentNode].position) < wayPointDistance)
         {
             currentNode++;
             if (currentNode == nodes.Count)
