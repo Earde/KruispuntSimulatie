@@ -6,10 +6,16 @@ public class CameraScript : MonoBehaviour
 {
     public Transform objectPosition;
     public Vector3 offset;
+    public 
+
+    void Start()
+    {
+        transform.position = objectPosition.position + offset;
+    }
 
     void Update()
     {
-        transform.position = objectPosition.position + offset;
         transform.LookAt(objectPosition);
+        transform.Translate(Vector3.right * Time.deltaTime * 2f);
     }
 }
