@@ -1085,7 +1085,7 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: 8421d589a92c3fd4abf06059d012a950, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 0.991
+  weight: 0.9
   priority: 0
 --- !u!4 &280369733
 Transform:
@@ -7937,7 +7937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPosition: {fileID: 1852008073}
-  offset: {x: 0, y: 50, z: -150}
+  offset: {x: 0, y: 70, z: -160}
+  speed: 2.5
 --- !u!114 &1938502004
 MonoBehaviour:
   m_ObjectHideFlags: 0
