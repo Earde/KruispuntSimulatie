@@ -26,7 +26,7 @@ public class CarEngine : MonoBehaviour
 
     [Header("Sensor")]
     public float sensorLength = 10f;
-    public float frontSensorPosition = 2.1f;
+    public float frontSensorDistance = 2.1f;
 
     [Header("Do not edit")]
     public bool delete = false;
@@ -68,7 +68,7 @@ public class CarEngine : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 sensorStartPosition = this.gameObject.transform.localPosition;
-        sensorStartPosition.z += frontSensorPosition;
+        sensorStartPosition += transform.forward * frontSensorDistance;
         sensorStartPosition.y += 1.0f;
 
         if (Physics.Raycast(sensorStartPosition, transform.forward, out hit, sensorLength))

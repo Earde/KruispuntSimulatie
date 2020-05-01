@@ -14,11 +14,12 @@ public class TrafficSpawner : MonoBehaviour
     public float spawnTime = 3.0f;
     public int pressurePlateStartNode = 1;
     private Vector3 spawnPoint;
+    private float spawnAngle;
 
     private void Start()
     {
         spawnPoint = path.GetComponentsInChildren<Transform>().First(pt => pt != path.transform).position; // Get first point of path
-
+        spawnAngle = GetSpawnAngle();
         InvokeRepeating("SpawnCar", Random.Range(0.0f, 2.0f), spawnTime);
     }
 
@@ -34,7 +35,40 @@ public class TrafficSpawner : MonoBehaviour
             car.pressurePlateEndNode = pressurePlateStartNode + 2;
             carObject.transform.position = spawnPoint;
             carObject.tag = "Car";
+            carObject.transform.rotation = Quaternion.identity;
+            carObject.transform.Rotate(0.0f, spawnAngle, 0.0f);
             Instantiate(carObject);
+        }
+    }
+
+    private float GetSpawnAngle()
+    {
+        Vector3? start = null, end = null;
+        Transform[] pathTransform = path.GetComponentsInChildren<Transform>();
+
+        for (int i = 0; i < pathTransform.Length; i++)
+        {
+            if (pathTransform[i] != path.transform)
+            {
+                if (!start.HasValue)
+                {
+                    start = pathTransform[i].position;
+                }
+                else if (!end.HasValue)
+                {
+                    end = pathTransform[i].position;
+                } else
+                {
+                    break;
+                }
+            }
+        }
+        if (end.HasValue)
+        {
+            return Vector3.Angle(end.Value - start.Value, transform.forward);
+        } else
+        {
+            return 0.0f;
         }
     }
 

@@ -106,6 +106,10 @@ public class NetworkHandler : MonoBehaviour
         {
             Debug.Log("Error parsing json: " + message);
         }
+        finally
+        {
+            //Debug.Log("Received: " + message);
+        }
     }
 
     async void SendTraffic()
