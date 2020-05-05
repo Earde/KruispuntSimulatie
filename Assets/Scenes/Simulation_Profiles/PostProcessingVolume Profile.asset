@@ -1329,16 +1329,16 @@ MonoBehaviour:
     value: 1
   filtering:
     overrideState: 1
-    value: {x: 47.27836, y: 63.855255}
+    value: {x: 39.724865, y: 50.311054}
   minLuminance:
     overrideState: 1
-    value: -7.83
+    value: -3.21
   maxLuminance:
     overrideState: 1
-    value: -0.24
+    value: -0.07
   keyValue:
     overrideState: 1
-    value: 0.25
+    value: 0.2
   eyeAdaptation:
     overrideState: 0
     value: 0
@@ -1366,7 +1366,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1.5
+    value: 1
   threshold:
     overrideState: 1
     value: 1
@@ -1413,7 +1413,7 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 270
+    value: 100
   sampleCount:
     overrideState: 1
     value: 10

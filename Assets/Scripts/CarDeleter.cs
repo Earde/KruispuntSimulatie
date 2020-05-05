@@ -18,7 +18,7 @@ public class CarDeleter : MonoBehaviour
             if (car.GetComponent<CarEngine>().delete)
             {
                 carsToDelete.Add(car);
-                Debug.Log("Delete");
+                //Debug.Log("Delete");
             }
         }
         foreach (GameObject car in carsToDelete)

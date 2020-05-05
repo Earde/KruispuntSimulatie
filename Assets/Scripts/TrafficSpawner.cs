@@ -67,7 +67,10 @@ public class TrafficSpawner : MonoBehaviour
         }
         if (end.HasValue)
         {
-            return Vector3.Angle(end.Value - start.Value, transform.forward);
+            Vector3 referenceRight = Vector3.Cross(Vector3.up, transform.forward);
+            float angle = Vector3.Angle(end.Value - start.Value, transform.forward);
+            float sign = Mathf.Sign(Vector3.Dot(end.Value - start.Value, referenceRight));
+            return sign * angle; // -180 to 180 degrees
         } else
         {
             return 0.0f;
