@@ -13,6 +13,7 @@ public class TrafficSpawner : MonoBehaviour
     public int spawnChangePercentage = 10;
     public float spawnTime = 3.0f;
     public int pressurePlateStartNode = 1;
+    public float startAfter = 0.0f;
     private Vector3 spawnPoint;
     private float spawnAngle;
 
@@ -20,7 +21,8 @@ public class TrafficSpawner : MonoBehaviour
     {
         spawnPoint = path.GetComponentsInChildren<Transform>().First(pt => pt != path.transform).position; // Get first point of path
         spawnAngle = GetSpawnAngle();
-        InvokeRepeating("SpawnCar", Random.Range(0.0f, 2.0f), spawnTime);
+        float delay = startAfter <= 0.0f ? Random.Range(0.1f, 2.0f) : startAfter;
+        InvokeRepeating("SpawnCar", startAfter, spawnTime);
     }
 
     private void SpawnCar()

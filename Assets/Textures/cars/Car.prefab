@@ -69,15 +69,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4793323692711816, guid: 6f39632663e189a43ba1dba6a3232eea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.099991
+      value: 7.191147
       objectReference: {fileID: 0}
     - target: {fileID: 4793323692711816, guid: 6f39632663e189a43ba1dba6a3232eea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.8
+      value: 30.392593
       objectReference: {fileID: 0}
     - target: {fileID: 4793323692711816, guid: 6f39632663e189a43ba1dba6a3232eea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 96.65
+      value: 194.14917
       objectReference: {fileID: 0}
     - target: {fileID: 4793323692711816, guid: 6f39632663e189a43ba1dba6a3232eea, type: 3}
       propertyPath: m_LocalRotation.x
@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4793323692711816, guid: 6f39632663e189a43ba1dba6a3232eea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7052077
+      value: 0.42254135
       objectReference: {fileID: 0}
     - target: {fileID: 4793323692711816, guid: 6f39632663e189a43ba1dba6a3232eea, type: 3}
       propertyPath: m_LocalRotation.z
@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4793323692711816, guid: 6f39632663e189a43ba1dba6a3232eea, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70900077
+      value: 0.90634364
       objectReference: {fileID: 0}
     - target: {fileID: 4793323692711816, guid: 6f39632663e189a43ba1dba6a3232eea, type: 3}
       propertyPath: m_RootOrder
@@ -281,7 +281,7 @@ PrefabInstance:
     - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
         type: 3}
       propertyPath: id
-      value: B4
+      value: C3
       objectReference: {fileID: 0}
     - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
         type: 3}
@@ -306,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
         type: 3}
       propertyPath: pressurePlateEndNode
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4058614725256118744, guid: 6f39632663e189a43ba1dba6a3232eea,
         type: 3}
