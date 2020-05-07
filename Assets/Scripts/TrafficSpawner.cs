@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class TrafficSpawner : MonoBehaviour
 {
-    public GameObject[] carObjects;
+    public bool isCar = true;
+    public GameObject[] spawnObjects;
     public Transform path;
     public GameObject trafficLight;
     public string id;
@@ -22,14 +23,20 @@ public class TrafficSpawner : MonoBehaviour
         spawnPoint = path.GetComponentsInChildren<Transform>().First(pt => pt != path.transform).position; // Get first point of path
         spawnAngle = GetSpawnAngle();
         float delay = startAfter <= 0.0f ? Random.Range(0.1f, 2.0f) : startAfter;
-        InvokeRepeating("SpawnCar", startAfter, spawnTime);
+        if (isCar)
+        {
+            InvokeRepeating("SpawnCar", startAfter, spawnTime);
+        } else
+        {
+            InvokeRepeating("SpawnHuman", startAfter, spawnTime);
+        }
     }
 
     private void SpawnCar()
     {
-        if (Random.Range(0, 100) < spawnChangePercentage && CarCountOnPressurePlate() < maxWaitingTraffic)
+        if (Random.Range(0, 100) < spawnChangePercentage && CountBeforeTrafficLight(false) < maxWaitingTraffic)
         {
-            GameObject carObject = carObjects[Random.Range(0, carObjects.Length)];
+            GameObject carObject = spawnObjects[Random.Range(0, spawnObjects.Length)];
             CarEngine car = carObject.GetComponent<CarEngine>();
             car.path = path;
             car.id = id;
@@ -40,6 +47,24 @@ public class TrafficSpawner : MonoBehaviour
             carObject.transform.rotation = Quaternion.identity;
             carObject.transform.Rotate(0.0f, spawnAngle, 0.0f);
             Instantiate(carObject);
+        }
+    }
+
+    private void SpawnHuman()
+    {
+        if (Random.Range(0, 100) < spawnChangePercentage && CountBeforeTrafficLight(false) < maxWaitingTraffic)
+        {
+            GameObject humanObject = spawnObjects[Random.Range(0, spawnObjects.Length)];
+            HumanEngine human = humanObject.GetComponent<HumanEngine>();
+            human.path = path;
+            human.id = id;
+            human.trafficLight = trafficLight;
+            human.pressurePlateEndNode = pressurePlateStartNode + 2;
+            humanObject.transform.position = spawnPoint;
+            humanObject.tag = "Human";
+            humanObject.transform.rotation = Quaternion.identity;
+            humanObject.transform.Rotate(0.0f, spawnAngle, 0.0f);
+            Instantiate(humanObject);
         }
     }
 
@@ -77,13 +102,22 @@ public class TrafficSpawner : MonoBehaviour
         }
     }
 
-    public int CarCountOnPressurePlate()
+    public int CountBeforeTrafficLight(bool usePressurePlateStart)
     {
         int count = 0;
+        int ppsn = usePressurePlateStart ? pressurePlateStartNode : 0;
         foreach (GameObject car in GameObject.FindGameObjectsWithTag("Car"))
         {
             CarEngine engine = car.GetComponent<CarEngine>();
-            if (engine.id == id && engine.currentNode > pressurePlateStartNode && engine.currentNode <= pressurePlateStartNode + 2)
+            if (engine.id == id && engine.currentNode > ppsn && engine.currentNode <= pressurePlateStartNode + 2)
+            {
+                count++;
+            }
+        }
+        foreach (GameObject car in GameObject.FindGameObjectsWithTag("Human"))
+        {
+            HumanEngine engine = car.GetComponent<HumanEngine>();
+            if (engine.id == id && engine.currentNode > ppsn && engine.currentNode <= pressurePlateStartNode + 2)
             {
                 count++;
             }

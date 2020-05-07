@@ -47,7 +47,7 @@ public class NetworkHandler : MonoBehaviour
         }
 
         // Set server callbacks
-        webSocket = new WebSocket("ws://localhost:8000");
+        webSocket = new WebSocket("ws://04da997e.ngrok.io");
 
         webSocket.OnOpen += () =>
         {
@@ -124,7 +124,7 @@ public class NetworkHandler : MonoBehaviour
             foreach (GameObject path in GameObject.FindGameObjectsWithTag("Path"))
             {
                 TrafficSpawner ts = path.GetComponent<TrafficSpawner>();
-                lanes[ts.id] = ts.CarCountOnPressurePlate();
+                lanes[ts.id] = ts.CountBeforeTrafficLight(true);
             }
             string json = JsonConvert.SerializeObject(lanes);
             await webSocket.SendText(json);

@@ -131,7 +131,6 @@ public class CarEngine : MonoBehaviour
         if (currentNode == pressurePlateEndNode && trafficLight.GetComponent<TrafficLight>().trafficLight.color != Color.green)
         {
             isBraking = true;
-            //TODO: Build logic for orange
         }
         if (Vector3.Distance(transform.position, nodes[currentNode].position) < wayPointDistance)
         {
