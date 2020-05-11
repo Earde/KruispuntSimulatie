@@ -47,7 +47,7 @@ public class NetworkHandler : MonoBehaviour
         }
 
         // Set server callbacks
-        webSocket = new WebSocket("ws://04da997e.ngrok.io");
+        webSocket = new WebSocket("ws://localhost:8000");
 
         webSocket.OnOpen += () =>
         {

@@ -20,6 +20,7 @@ public class HumanEngine : MonoBehaviour
 
     [Header("Human")]
     public float m_moveSpeed = 2;
+    public float animationSpeed = 0.5f;
     public Animator m_animator;
     public Rigidbody m_rigidBody;
 
@@ -39,6 +40,9 @@ public class HumanEngine : MonoBehaviour
 
     void Start()
     {
+        sensorLength *= UnityEngine.Random.Range(0.95f, 1.15f); // Zorgt ervoor dat niet al het verkeer precies even dicht op elkaar gaat staan
+        m_moveSpeed *= UnityEngine.Random.Range(1.0f, 1.1f); // Zorgt ervoor dat niet al het verkeer even snel wandelt
+
         Transform[] pathTransform = path.GetComponentsInChildren<Transform>();
         nodes = new List<Transform>();
 
@@ -78,7 +82,7 @@ public class HumanEngine : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(m_currentDirection);
                 transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
 
-                m_animator.SetFloat("MoveSpeed", direction.magnitude / 2f);
+                m_animator.SetFloat("MoveSpeed", direction.magnitude * animationSpeed);
             }
         } else
         {

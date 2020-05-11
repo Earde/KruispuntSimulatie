@@ -40,6 +40,8 @@ public class CarEngine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sensorLength = sensorLength * UnityEngine.Random.Range(1.0f, 1.05f); // Zorgt ervoor dat niet al het verkeeer precies even dicht op elkaar gaat staan
+
         GetComponent<Rigidbody>().centerOfMass = centerOfMass;
 
         Transform[] pathTransform = path.GetComponentsInChildren<Transform>();
@@ -56,22 +58,21 @@ public class CarEngine : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Sensors();
         CheckWaypointDistance();
-        ApplySteer();
+        Sensors(ApplySteer());
         Drive();
         Brake();
         isBraking = false;
     }
 
-    private void Sensors()
+    private void Sensors(float wheelAngle)
     {
         RaycastHit hit;
         Vector3 sensorStartPosition = this.gameObject.transform.localPosition;
         sensorStartPosition += transform.forward * frontSensorDistance;
         sensorStartPosition.y += 1.0f;
 
-        if (Physics.Raycast(sensorStartPosition, transform.forward, out hit, sensorLength))
+        if (Physics.Raycast(sensorStartPosition, Quaternion.Euler(0.0f, wheelAngle, 0.0f) * transform.forward, out hit, sensorLength))
         {
             CarEngine carInFront = hit.collider.gameObject.GetComponentInParent<CarEngine>();
             if (carInFront != null)
@@ -82,16 +83,18 @@ public class CarEngine : MonoBehaviour
             }
         } else
         {
+            //Debug.DrawLine(sensorStartPosition, sensorStartPosition + Quaternion.Euler(0.0f, wheelAngle, 0.0f) * transform.forward, Color.white);
             tempMaxSpeed = maxSpeed;
         }
     }
 
-    private void ApplySteer()
+    private float ApplySteer()
     {
         Vector3 relativeVector = transform.InverseTransformPoint(nodes[currentNode].position);
         float newSteer = (relativeVector.x / relativeVector.magnitude) * maxSteerAngle;
         wheelFL.steerAngle = newSteer;
         wheelFR.steerAngle = newSteer;
+        return newSteer;
     }
 
     private void Drive()

@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetWheel: {fileID: 5378883413381512776}
+  wheelPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!23 &7248151827412018053
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -376,6 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetWheel: {fileID: 3976059838048574197}
+  wheelPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!23 &1367641121703055238
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -628,6 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetWheel: {fileID: 3976059838048573962}
+  wheelPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!23 &7719325179677869147
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -724,6 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetWheel: {fileID: 1757516375072803238}
+  wheelPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!23 &4127168277530954770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -825,9 +829,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6761773702947560068}
-  m_LocalRotation: {x: 0, y: 0.70527816, z: 0, w: 0.70893073}
-  m_LocalPosition: {x: 4.099991, y: 30.8, z: 102.75}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalRotation: {x: 0, y: 0.42254135, z: 0, w: 0.90634364}
+  m_LocalPosition: {x: 7.191147, y: 30.392593, z: 194.14917}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children:
   - {fileID: 2924646184384316646}
   - {fileID: 5605737570740934320}
@@ -862,11 +866,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3142f32c17bcdf43816f96fdddbbfbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: B3
+  id: C2
   trafficLight: {fileID: 0}
   path: {fileID: 0}
   wayPointDistance: 5
-  pressurePlateEndNode: 3
+  pressurePlateEndNode: 7
   maxSteerAngle: 45
   wheelFL: {fileID: 3976059838048573962}
   wheelFR: {fileID: 3976059838048574197}
