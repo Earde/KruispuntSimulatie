@@ -41,6 +41,7 @@ public class CarEngine : MonoBehaviour
     void Start()
     {
         sensorLength = sensorLength * UnityEngine.Random.Range(1.0f, 1.05f); // Zorgt ervoor dat niet al het verkeeer precies even dicht op elkaar gaat staan
+        maxSpeed *= UnityEngine.Random.Range(0.95f, 1f); // Zorgt ervoor dat niet al het verkeer even snel rijdt
 
         GetComponent<Rigidbody>().centerOfMass = centerOfMass;
 

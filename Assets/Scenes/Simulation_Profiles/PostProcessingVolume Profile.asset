@@ -18,7 +18,7 @@ MonoBehaviour:
     value: 1
   gradingMode:
     overrideState: 1
-    value: 1
+    value: 0
   externalLut:
     overrideState: 1
     value: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   ldrLut:
-    overrideState: 1
+    overrideState: 0
     value: {fileID: 0}
     defaultState: 4
   ldrLutContribution:
@@ -65,16 +65,16 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 2
+    value: 30
   brightness:
     overrideState: 1
-    value: 0
+    value: 5
   postExposure:
     overrideState: 1
-    value: 0.75
+    value: 0.5
   contrast:
     overrideState: 1
-    value: 2
+    value: -5
   mixerRedOutRedIn:
     overrideState: 1
     value: 100
@@ -1530,7 +1530,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.25
+    value: 0.6
   color:
     overrideState: 1
     value: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
@@ -1548,7 +1548,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 1
+    value: 2
   directLightingStrength:
     overrideState: 0
     value: 0
@@ -1570,7 +1570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a34fa72bd4185749832024e9c8010bf, type: 3}
   m_Name: ScreenSpaceReflections
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1

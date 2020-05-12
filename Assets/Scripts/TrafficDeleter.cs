@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarDeleter : MonoBehaviour
+public class TrafficDeleter : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -12,18 +12,24 @@ public class CarDeleter : MonoBehaviour
 
     private void CheckForDelete()
     {
-        List<GameObject> carsToDelete = new List<GameObject>();
+        List<GameObject> objectsToDelete = new List<GameObject>();
         foreach (GameObject car in GameObject.FindGameObjectsWithTag("Car"))
         {
             if (car.GetComponent<CarEngine>().delete)
             {
-                carsToDelete.Add(car);
-                //Debug.Log("Delete");
+                objectsToDelete.Add(car);
             }
         }
-        foreach (GameObject car in carsToDelete)
+        foreach (GameObject human in GameObject.FindGameObjectsWithTag("Human"))
         {
-            Destroy(car);
+            if (human.GetComponent<HumanEngine>().delete)
+            {
+                objectsToDelete.Add(human);
+            }
+        }
+        foreach (GameObject obj in objectsToDelete)
+        {
+            Destroy(obj);
         }
     }
 }

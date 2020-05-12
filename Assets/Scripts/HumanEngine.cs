@@ -8,10 +8,10 @@ using UnityEngine;
 public class HumanEngine : MonoBehaviour
 {
     [Header("General")]
-    public string id = "";
-
-    [Header("Traffic Light")]
-    public GameObject trafficLight;
+    public string firstId = "";
+    public GameObject firstTrafficLight;
+    public string secondId = "";
+    public GameObject secondTrafficLight;
 
     [Header("Path")]
     public Transform path;
@@ -41,7 +41,7 @@ public class HumanEngine : MonoBehaviour
     void Start()
     {
         sensorLength *= UnityEngine.Random.Range(0.95f, 1.15f); // Zorgt ervoor dat niet al het verkeer precies even dicht op elkaar gaat staan
-        m_moveSpeed *= UnityEngine.Random.Range(1.0f, 1.1f); // Zorgt ervoor dat niet al het verkeer even snel wandelt
+        //m_moveSpeed *= UnityEngine.Random.Range(1.0f, 1.1f); // Zorgt ervoor dat niet al het verkeer even snel wandelt
 
         Transform[] pathTransform = path.GetComponentsInChildren<Transform>();
         nodes = new List<Transform>();
@@ -114,7 +114,13 @@ public class HumanEngine : MonoBehaviour
 
     private void CheckWaypointDistance()
     {
-        if (currentNode == pressurePlateEndNode && trafficLight.GetComponent<TrafficLight>().trafficLight.color != Color.green)
+        // Eerste stoplicht
+        if (currentNode == pressurePlateEndNode && firstTrafficLight.GetComponent<TrafficLight>().trafficLight.color != Color.green)
+        {
+            isBraking = true;
+        }
+        // Tweede stoplicht
+        else if (currentNode == pressurePlateEndNode + 2 && secondTrafficLight.GetComponent<TrafficLight>().trafficLight.color != Color.green)
         {
             isBraking = true;
         }

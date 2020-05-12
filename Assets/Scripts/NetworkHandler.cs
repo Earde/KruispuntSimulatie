@@ -123,8 +123,16 @@ public class NetworkHandler : MonoBehaviour
             }
             foreach (GameObject path in GameObject.FindGameObjectsWithTag("Path"))
             {
-                TrafficSpawner ts = path.GetComponent<TrafficSpawner>();
-                lanes[ts.id] = ts.CountBeforeTrafficLight(true);
+                CarSpawner cs = path.GetComponent<CarSpawner>();
+                if (cs != null)
+                {
+                    lanes[cs.id] = cs.CountBeforeTrafficLight(true);
+                } else
+                {
+                    HumanSpawner hs = path.GetComponent<HumanSpawner>();
+                    lanes[hs.firstId] = hs.CountBeforeFirstTrafficLight(true);
+                    lanes[hs.secondId] = hs.CountBeforeSecondTrafficLight();
+                }
             }
             string json = JsonConvert.SerializeObject(lanes);
             await webSocket.SendText(json);
