@@ -21,25 +21,30 @@ public class CarSpawner : MonoBehaviour
     {
         spawnPoint = path.GetComponentsInChildren<Transform>().First(pt => pt != path.transform).position; // Get first point of path
         spawnAngle = SpawnHelper.GetSpawnAngle(path, transform);
-        float delay = startAfter <= 0.0f ? Random.Range(0.1f, 2.0f) : startAfter;
-        InvokeRepeating("SpawnCar", startAfter, spawnTime);
+        StartCoroutine("SpawnCars");
     }
 
-    private void SpawnCar()
+    private IEnumerator SpawnCars()
     {
-        if (Random.Range(0, 100) < spawnChangePercentage && CountBeforeTrafficLight(false) < maxWaitingTraffic)
+        float delay = startAfter <= 0.0f ? Random.Range(0.5f, 2.5f) : startAfter;
+        yield return new WaitForSeconds(delay);
+        while (true)
         {
-            GameObject carObject = spawnObjects[Random.Range(0, spawnObjects.Length)];
-            CarEngine car = carObject.GetComponent<CarEngine>();
-            car.path = path;
-            car.id = id;
-            car.trafficLight = trafficLight;
-            car.pressurePlateEndNode = pressurePlateStartNode + 2;
-            carObject.transform.position = spawnPoint;
-            carObject.tag = "Car";
-            carObject.transform.rotation = Quaternion.identity;
-            carObject.transform.Rotate(0.0f, spawnAngle, 0.0f);
-            Instantiate(carObject);
+            if (Random.Range(0, 100) < spawnChangePercentage && CountBeforeTrafficLight(false) < maxWaitingTraffic)
+            {
+                GameObject carObject = spawnObjects[Random.Range(0, spawnObjects.Length)];
+                CarEngine car = carObject.GetComponent<CarEngine>();
+                car.path = path;
+                car.id = id;
+                car.trafficLight = trafficLight;
+                car.pressurePlateEndNode = pressurePlateStartNode + 2;
+                carObject.transform.position = spawnPoint;
+                carObject.tag = "Car";
+                carObject.transform.rotation = Quaternion.identity;
+                carObject.transform.Rotate(0.0f, spawnAngle, 0.0f);
+                Instantiate(carObject);
+            }
+            yield return new WaitForSeconds(spawnTime);
         }
     }
 

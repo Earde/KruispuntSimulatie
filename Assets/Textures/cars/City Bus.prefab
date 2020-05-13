@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33487610775891724}
   - component: {fileID: 23757891582141210}
   - component: {fileID: 213871715422858002}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WB2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4755633542472544}
   - component: {fileID: -2552433174746385668}
   - component: {fileID: -6420971233459599474}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: City Bus
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -119,8 +119,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088083314195414}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 12, y: 30.8, z: 90.4}
+  m_LocalRotation: {x: 0, y: -0.704404, z: 0, w: 0.7097993}
+  m_LocalPosition: {x: 247.06999, y: 30.8, z: 146.95999}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4055370351445794}
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3142f32c17bcdf43816f96fdddbbfbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: BB1
+  id: AB2
   trafficLight: {fileID: 0}
   path: {fileID: 0}
   wayPointDistance: 5
@@ -166,10 +166,10 @@ MonoBehaviour:
   wheelFR: {fileID: 8183586922751471792}
   maxMotorBrakeTorque: 5000
   maxMotorTorque: 10000
-  maxSpeed: 12
+  maxSpeed: 25
   centerOfMass: {x: 0, y: 0, z: 0}
-  sensorLength: 10
-  frontSensorDistance: 6
+  sensorLength: 25
+  frontSensorDistance: 10
   delete: 0
   currentNode: 0
   currentSpeed: 0
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 33869867732346148}
   - component: {fileID: 23781418323928166}
   - component: {fileID: 1024155128136611499}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WB1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4012594891693864}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WPF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 4055370351445794}
   - component: {fileID: 33454499057078672}
   - component: {fileID: 23417610459626780}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: City Bus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4898113111614658}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WDF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 33968172159457676}
   - component: {fileID: 23369712096406224}
   - component: {fileID: 2153712538996642919}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WB1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 33144176079989380}
   - component: {fileID: 23743073108454006}
   - component: {fileID: 4822835416189998904}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WB2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4572638780723598}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WDR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4819384234990996}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WPR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435721385488859028}
   - component: {fileID: 8183586922751471792}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WB1_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,7 +737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2473796531371519700}
   - component: {fileID: 2712659481560463899}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WB1_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6289480170083703720}
   - component: {fileID: 7777857434124494862}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WB2_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -859,7 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8804449920090806723}
   - component: {fileID: 4078813547377362659}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WB2_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,7 +920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8733513009639589388}
   - component: {fileID: 7688026201018881606}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -57,8 +57,8 @@ public class HumanEngine : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (delete) { return; }
         m_animator.SetBool("Grounded", true);
-
         Sensors();
         CheckWaypointDistance();
         Move();

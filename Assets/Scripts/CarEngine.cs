@@ -59,6 +59,7 @@ public class CarEngine : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (delete) { return; }
         CheckWaypointDistance();
         Sensors(ApplySteer());
         Drive();

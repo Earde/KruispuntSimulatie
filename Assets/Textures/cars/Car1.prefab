@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4799148068533705412}
   - component: {fileID: 5536462487292712648}
   - component: {fileID: 7248151827412018053}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheel RL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8204359056845577033}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4186572396421587219}
   - component: {fileID: 5378883413381512776}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheel RL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 2924646184384316646}
   - component: {fileID: 8363110166011858314}
   - component: {fileID: 9071499427072524548}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5605737570740934320}
   - component: {fileID: 4194964692407069021}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3189688545593636749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5425507700861202915}
@@ -321,7 +321,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8, y: 1.5, z: 6.5}
+  m_Size: {x: 2.2, y: 1.2, z: 6}
   m_Center: {x: 0, y: 0.6, z: -0.63}
 --- !u!1 &3380500142813494896
 GameObject:
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 6142766726433776803}
   - component: {fileID: 7892036642106005806}
   - component: {fileID: 1367641121703055238}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheel FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2137721747060125172}
   - component: {fileID: 3976059838048574197}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheel FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2567632468652381850}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheels colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4954002547320765439}
   - component: {fileID: 1757516375072803238}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheel RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 5100336883622793162}
   - component: {fileID: 6852220093565227343}
   - component: {fileID: 7719325179677869147}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheel FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 3760595799122000487}
   - component: {fileID: 5508461312669803097}
   - component: {fileID: 4127168277530954770}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheel RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8548189433488787761}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheels transforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 5425507700861202915}
   - component: {fileID: 5435550880355292969}
   - component: {fileID: 5422141802061696428}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Car1
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -829,8 +829,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6761773702947560068}
-  m_LocalRotation: {x: 0, y: 0.70369923, z: 0, w: 0.710498}
-  m_LocalPosition: {x: 4.099991, y: 30.8, z: 74.9}
+  m_LocalRotation: {x: 0, y: -0.015521661, z: 0, w: 0.99987954}
+  m_LocalPosition: {x: 117.721146, y: 30.392593, z: 5.159172}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children:
   - {fileID: 2924646184384316646}
@@ -866,11 +866,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3142f32c17bcdf43816f96fdddbbfbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: B5
+  id: D2
   trafficLight: {fileID: 0}
   path: {fileID: 0}
   wayPointDistance: 5
-  pressurePlateEndNode: 5
+  pressurePlateEndNode: 3
   maxSteerAngle: 45
   wheelFL: {fileID: 3976059838048573962}
   wheelFR: {fileID: 3976059838048574197}
@@ -893,7 +893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7974599001922470083}
   - component: {fileID: 3976059838048573962}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wheel FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 895188490349238289}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bone.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 312864239844392448}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pedal_kiri_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6307836067381809038}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: base_sepeda_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 6802080337793240127}
   - component: {fileID: 1028233356183634886}
   - component: {fileID: 582738218306354852}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pedal_kiri 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4310238090149076373}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: stank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 4152746941989336230}
   - component: {fileID: 8844355471947322707}
   - component: {fileID: 4250617895926323255}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sepeda Facific Invert 1
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ Transform:
   - {fileID: 8525451744060293639}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -98.163, z: 0}
 --- !u!54 &8844355471947322707
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -276,9 +276,9 @@ MonoBehaviour:
   maxSteerAngle: 75
   wheelFL: {fileID: 4574180232350098811}
   wheelFR: {fileID: 2622663453037219551}
-  maxMotorBrakeTorque: 1000
-  maxMotorTorque: 1000
-  maxSpeed: 10
+  maxMotorBrakeTorque: 350
+  maxMotorTorque: 350
+  maxSpeed: 6
   centerOfMass: {x: 0, y: 0, z: 0}
   sensorLength: 12
   frontSensorDistance: 2
@@ -294,7 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6068357385903894171}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7414691428173924882}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bone.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 51499529109697506}
   - component: {fileID: 7939712642831479593}
   - component: {fileID: 7465213741484434658}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gear_belakang 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8421123476027220624}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rantai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 381783932692004126}
   - component: {fileID: 6394393132031641076}
   - component: {fileID: 589524740216245669}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BezierCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 229445668854040342}
   - component: {fileID: 980998298000607935}
   - component: {fileID: 3382355129010390200}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rangka_sepeda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 357271431390036141}
   - component: {fileID: 8471029643899930121}
   - component: {fileID: 3536362824840073706}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pedal_kanan 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6251060354316653645}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pedal_kanan_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -751,7 +751,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6133724802176088821}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pedal_kiri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4415315833782504077}
   - component: {fileID: 3858748487451390081}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gear_belakang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetWheel: {fileID: 6119665883881420675}
-  wheelPositionOffset: {x: 0.002, y: 0, z: 0}
+  wheelPositionOffset: {x: 0.01, y: 0, z: 0}
 --- !u!1 &3205624487054339939
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7184635146009950485}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gear_belakang_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5300622523981135930}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Armature_sepeda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9163640384716791684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: base_pedal_kiri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -923,7 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7921591771731868215}
   - component: {fileID: 6119665883881420675}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,7 +938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4422888389032461577}
   m_LocalRotation: {x: -0.75835615, y: 5.8207654e-11, z: 5.8207654e-11, w: -0.6518404}
-  m_LocalPosition: {x: 0.01, y: 2.953, z: -1.11}
+  m_LocalPosition: {x: 0.5, y: 2.953, z: -1.11}
   m_LocalScale: {x: 100.00005, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4152746941989336230}
@@ -966,7 +966,7 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_Stiffness: 5
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
@@ -983,7 +983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8857315631134938894}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: roda_depan_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6863929216106562269}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bone.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1044,7 +1044,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6387119569274317201}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bone.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1076,7 +1076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8525451744060293639}
   - component: {fileID: 6641034138232447950}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Back (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1091,7 +1091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5328583969140104275}
   m_LocalRotation: {x: -0.75835615, y: 5.8207654e-11, z: 5.8207654e-11, w: -0.6518404}
-  m_LocalPosition: {x: -0.01, y: 2.953, z: -1.11}
+  m_LocalPosition: {x: -0.5, y: 2.953, z: -1.11}
   m_LocalScale: {x: 100.00005, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4152746941989336230}
@@ -1119,7 +1119,7 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_Stiffness: 5
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: 7215566258937493492}
   - component: {fileID: 1009245269576935029}
   - component: {fileID: 2532854303014176472}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rantai 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1215,7 +1215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4842744658354022685}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bone.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1247,7 +1247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 704774613478683584}
   - component: {fileID: 4574180232350098811}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Front (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1262,7 +1262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6363759281564598180}
   m_LocalRotation: {x: -1.1641531e-10, y: 0.70723027, z: 0.7069833, w: 5.8207654e-11}
-  m_LocalPosition: {x: -0.01, y: 2.98, z: 5.96}
+  m_LocalPosition: {x: -0.5, y: 2.98, z: 5.96}
   m_LocalScale: {x: 100.00002, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4152746941989336230}
@@ -1290,7 +1290,7 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_Stiffness: 5
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
@@ -1309,7 +1309,7 @@ GameObject:
   - component: {fileID: 3057912171402250494}
   - component: {fileID: 4171739444758327263}
   - component: {fileID: 155202696348011313}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ban_sepeda_depan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1396,7 +1396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355373420710477691}
   - component: {fileID: 6178128116309009001}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1428,8 +1428,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.114968896, z: 0.05873098}
-  m_Center: {x: 0, y: 0.05031147, z: 0.041565236}
+  m_Size: {x: 0.1, y: 0.114968896, z: 0.05364173}
+  m_Center: {x: 0.0000000070773014, y: 0.0503115, z: 0.03902054}
 --- !u!1 &6903717876277768989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1441,7 @@ GameObject:
   - component: {fileID: 1324435039941312463}
   - component: {fileID: 764319348505750405}
   - component: {fileID: 112412570414083398}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gear_depan 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1519,7 +1519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3787078969595058589}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bone.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1550,7 +1550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5284648997024428684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: base_pedal_kanan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1581,7 +1581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3015585857474448388}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: as_sepeda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1616,7 +1616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159928598463500728}
   - component: {fileID: 2622663453037219551}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1631,7 +1631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7366207828666542474}
   m_LocalRotation: {x: -1.1641531e-10, y: 0.70723027, z: 0.7069833, w: 5.8207654e-11}
-  m_LocalPosition: {x: 0.01, y: 2.98, z: 5.96}
+  m_LocalPosition: {x: 0.5, y: 2.98, z: 5.96}
   m_LocalScale: {x: 100.00002, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4152746941989336230}
@@ -1659,7 +1659,7 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_Stiffness: 5
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
@@ -1676,7 +1676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6062634277728529471}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gear_depan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1710,7 +1710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2630690049230646741}
   - component: {fileID: 2686671521284858135}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: roda_depan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1746,7 +1746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetWheel: {fileID: 2622663453037219551}
-  wheelPositionOffset: {x: 0.001, y: 0, z: 0}
+  wheelPositionOffset: {x: 0.0055, y: 0, z: 0}
 --- !u!1 &7566412942606810392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,7 +1756,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7986158458309438816}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: base_sepeda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1789,7 +1789,7 @@ GameObject:
   - component: {fileID: 5247625866934037565}
   - component: {fileID: 2613123875383066227}
   - component: {fileID: 8239164548126281125}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder_Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +1875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4314711911195919138}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: badan_sepeda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1907,7 +1907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6220185661356107526}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rantai_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1937,7 +1937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6844844043503841533}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pedal_kanan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
