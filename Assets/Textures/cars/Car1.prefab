@@ -829,8 +829,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6761773702947560068}
-  m_LocalRotation: {x: 0, y: -0.7095609, z: 0, w: 0.70464414}
-  m_LocalPosition: {x: 252.6, y: 30.8, z: 134.51}
+  m_LocalRotation: {x: 0, y: 0.42254135, z: 0, w: 0.90634364}
+  m_LocalPosition: {x: 7.191147, y: 30.392593, z: 194.14917}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children:
   - {fileID: 2924646184384316646}
@@ -866,11 +866,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3142f32c17bcdf43816f96fdddbbfbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: A3
+  id: C3
   trafficLight: {fileID: 0}
   path: {fileID: 0}
   wayPointDistance: 5
-  pressurePlateEndNode: 3
+  pressurePlateEndNode: 8
   maxSteerAngle: 45
   wheelFL: {fileID: 3976059838048573962}
   wheelFR: {fileID: 3976059838048574197}
