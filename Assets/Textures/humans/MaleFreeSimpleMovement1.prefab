@@ -993,8 +993,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824340380413090}
-  m_LocalRotation: {x: 0, y: 0.6675427, z: 0, w: 0.7445715}
-  m_LocalPosition: {x: 50.01001, y: 30.8, z: 81.2}
+  m_LocalRotation: {x: 0, y: -0.9999998, z: 0, w: 0.0006686012}
+  m_LocalPosition: {x: 59.699997, y: 30.8, z: 218.17}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4742318452996994}
@@ -1081,9 +1081,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af966aad55d1c048842f68a0edc44b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstId: EV3
+  firstId: EV2
   firstTrafficLight: {fileID: 0}
-  secondId: EV4
+  secondId: EV1
   secondTrafficLight: {fileID: 0}
   path: {fileID: 0}
   wayPointDistance: 1
