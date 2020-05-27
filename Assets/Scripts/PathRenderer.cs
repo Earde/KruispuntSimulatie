@@ -9,7 +9,7 @@ public class PathRenderer : MonoBehaviour
 
     private List<Transform> nodes = new List<Transform>();
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Transform[] pathTransforms = GetComponentsInChildren<Transform>();
         nodes = new List<Transform>();

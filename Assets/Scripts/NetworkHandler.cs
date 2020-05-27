@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class NetworkHandler : MonoBehaviour
 {
+    public string url = "localhost";
+
     public bool useLog = false;
 
     WebSocket webSocket;
@@ -47,7 +49,7 @@ public class NetworkHandler : MonoBehaviour
         }
 
         // Set server callbacks
-        webSocket = new WebSocket("ws://localhost:8000");
+        webSocket = new WebSocket("ws://" + url);
 
         webSocket.OnOpen += () =>
         {
